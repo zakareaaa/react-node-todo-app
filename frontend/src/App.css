@@ -1,0 +1,271 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+body {
+  background: #000; 
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.sign-up-container {
+  background: #1e1e1e; 
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  width: 400px;
+}
+
+.sign-up-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sign-up-form label {
+  min-width: 90px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #ddd;
+}
+
+.sign-up-form input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #2c2c2c;
+  color: #fff;
+}
+
+.sign-up-form input:focus {
+  outline: none;
+  border-color: #00bcd4;
+}
+
+.sign-up-form > div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.already-account {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.already-account button {
+  margin-top: 0.5rem;
+  background: #00bcd4;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.already-account button:hover {
+  background: #0097a7;
+}
+/* === Login Form Styling === */
+
+.login-container {
+  background: #1e1e1e; 
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  width: 400px;
+  color: #fff;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-form > div {
+  display: flex;           
+  gap: 1rem;
+  align-items: center;
+}
+
+.login-form label {
+  min-width: 90px;       
+  display: flex;          
+  align-items: center;
+  font-weight: bold;
+  color: #ddd;
+}
+
+
+.login-form input {
+  flex: 1;                 
+  padding: 0.6rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background: #2c2c2c;
+  color: #fff;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #00bcd4;   
+}
+
+.no-account {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.no-account button {
+  margin-top: 0.5rem;
+  background: #00bcd4;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.no-account button:hover {
+  background: #0097a7; 
+}
+
+
+.form-link-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #00bcd4;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  text-decoration: none; 
+  transition: 0.2s;
+}
+
+.form-link-btn:hover {
+  background: #0097a7;
+}
+.todo-container {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.todo-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.todo-container form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.todo-container form input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #2c2c2c;
+  color: #fff;
+}
+
+.todo-container form button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background: #00bcd4;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todo-container form button:hover {
+  background: #0097a7;
+}
+
+.todo-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #444;
+}
+
+.todo-container li span:hover {
+  color: #00bcd4;
+}
