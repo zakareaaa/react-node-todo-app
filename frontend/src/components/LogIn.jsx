@@ -67,7 +67,7 @@ export default function Login() {
       {message && <p style={{ color: "#00bcd4", marginTop: "1rem" }}>{message}</p>}
       <div className="no-account">
         <p>Don’t have an account?</p>
-        <Link to="/signup" className="form-link-btn">Sign Up</Link>
+        <Link to="/register" className="form-link-btn">Sign Up</Link>
       </div>
     </div>
   );
