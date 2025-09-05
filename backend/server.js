@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import User from "./models/user.js";
+import bcrypt from 'bcrypt';
 
 const uri = "mongodb://127.0.0.1:27017/myAppDB";
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -23,8 +24,9 @@ app.post("/register", async (req, res) => {
     if (existingUser) {
       return res.status(400).json({ message: "Email already in use" });
     }
+    const hashedPassword = await bcrypt.hash(password,10)
 
-    const newUser = new User({ name, email, password });
+    const newUser = new User({ name, email, password:hashedPassword });
     await newUser.save();
 
     res.status(201).json({
@@ -44,7 +46,9 @@ app.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email });
     if (!user) return res.status(404).json({ message: "User not found" });
-    if (user.password !== password) return res.status(401).json({ message: "Invalid password" });
+    // if (user.password !== password) return res.status(401).json({ message: "Invalid password" });
+    const isMatch = await bcrypt.compare(password,user.password)
+    if (!isMatch) return res.status(401).json({ message: "Invalid password" });
 
     res.status(200).json({
       message: "Login successful",

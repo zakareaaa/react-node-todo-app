@@ -5,7 +5,6 @@ export default function TodoList() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Get the whole user object from login
   const user = location.state?.user;
 
   const [todos, setTodos] = useState([]);
@@ -89,7 +88,7 @@ export default function TodoList() {
     <div className="todo-container">
       <h2>{user?.name}'s Todo List</h2>
 
-      {/* Back to Login button */}
+      
       <button 
         onClick={() => navigate("/login")} 
         style={{ marginBottom: "1rem", backgroundColor: "#f44336", color: "#fff", border: "none", padding: "8px 12px", cursor: "pointer", borderRadius: "4px" }}
